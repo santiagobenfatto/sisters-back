@@ -8,7 +8,7 @@ export default class CountriesRouter extends Router {
     init(){
         this.get('/', ['PUBLIC'], strategyEnum.NOTHING,countriesController.getAllCountries)
         this.get('/:countryId', ['PUBLIC'], strategyEnum.NOTHING,countriesController.getCountryById)
-        this.get('/country/:name', ['USER'], strategyEnum.JWT,countriesController.getCountryByName)
+        this.get('/country/:name', ['PUBLIC'], strategyEnum.NOTHING,countriesController.getCountryByName)
         this.get('/continent/:continent', ['PUBLIC'], strategyEnum.NOTHING,countriesController.getCountriesByContinentName)
        
         this.post('/country', ['ADMIN'], strategyEnum.JWT,countriesController.createCountry)

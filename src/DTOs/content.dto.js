@@ -8,7 +8,7 @@ export default class ContentDTO {
             content: []
         }
 
-        const DAOcontent = doc.map( cont => (
+        const DAOcontent = doc.map(cont => (
             {
                 title: cont.title,
                 paragraph: cont.paragraph
