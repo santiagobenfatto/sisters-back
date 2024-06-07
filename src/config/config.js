@@ -12,5 +12,7 @@ export default {
     persistence: process.env.PERSISTENCE,
     mysqlPass: process.env.MYSQLPASSWORD,
     privateKey: process.env.PRIVATE_KEY,
-    cookieToken: process.env.COOKIE_TOKEN
+    cookieToken: process.env.COOKIE_TOKEN,
+    tursoDatabaseUrl: process.env.TURSO_DATABASE_URL,
+    tursoAuthToken: process.env.TURSO_AUTH_TOKEN
 }

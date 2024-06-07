@@ -6,6 +6,10 @@ export default class DAOModuleGenerator {
         if(config.persistence === 'mysql'){
         const module = await import(`./dbManager/mysql/${className}.mysql.js`)
         return module.default
+        } else if(config.persistence === 'turso'){
+            const module = await import(`./dbManager/turso/${className}.turso.js`)
+            return module.default
+        
         } else {
             console.log('Persistence not found')
             return module.default
